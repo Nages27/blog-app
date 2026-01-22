@@ -1,0 +1,20 @@
+{% extends 'blogging/base.html' %}
+
+{% block title %}Add New Blog{% endblock %}
+
+{% block content %}
+<div style="text-align:center; margin-top:50px;">
+    <h2>Add a New Blog</h2>
+
+    {% if error_message %}
+        <p style="color:red;">{{ error_message }}</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="Blog Title"><br><br>
+        <textarea name="description" placeholder="Blog Description"></textarea><br><br>
+        <button type="submit">Post Blog</button>
+    </form>
+</div>
+{% endblock %}

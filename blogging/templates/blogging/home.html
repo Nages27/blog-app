@@ -1,0 +1,12 @@
+{% extends 'blogging/base.html' %}
+
+{% block title %}Home - My Blog{% endblock %}
+
+{% block content %}
+<div style="text-align:center; margin-top:50px;">
+    <h2>Welcome to My Blog!</h2>
+    <p>Please choose an option to continue:</p>
+    <a href="{% url 'login' %}" class="btn">Login</a>
+    <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+</div>
+{% endblock %}
